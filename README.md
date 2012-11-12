@@ -20,7 +20,7 @@ Usage
         print "moon",day.moonrise,day.moonset
         print "day_parts:"
         for p in day.day_parts:
-            print day.type,":"
+            print p.type,":"
             print p.temperature,p.weather_type,p.wind_direction,p.wind_speed,p.humidity,p.pressure
         for h in day.hours:
             print h.at,h.temperature

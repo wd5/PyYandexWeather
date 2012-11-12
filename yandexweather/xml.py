@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime, timedelta
 import os
-from os.path import dirname, exists, expanduser
+from os.path import abspath, dirname, exists, expanduser
 from lxml.objectify import fromstring
 import forecast
 import day
@@ -89,7 +89,7 @@ class cls:
         return self.current_part.pressure
 
     def save(self,f="~/Downloads/forecast.xml"):
-        f=expanduser(f)
+        f=abspath(expanduser(f))
         if not exists(dirname(f)):
             os.makedirs(dirname(f))
         open(f,"w").write(self.source.encode("ISO-8859-1"))
