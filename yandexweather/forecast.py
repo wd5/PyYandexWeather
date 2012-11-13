@@ -9,9 +9,8 @@ class cls(day_part.cls):
     temperature = None
 
 def str2datetime(path):
-    format='%Y-%d-%mT%H:%M:%S'
+    format='%Y-%m-%dT%H:%M:%S'
     return datetime.strptime(path,format)
-
     
 def factory(e):
     i=day_part.factory(e)
